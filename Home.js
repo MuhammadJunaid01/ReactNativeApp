@@ -3,11 +3,11 @@ import { StyleSheet,View,Text ,Image,TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import bannerImage from './assets/bro.png'
 
-const Home = () => {
+
+const Home = (props) => {
+console.log('props', props)
     return (
         <View style={styles.homeContainer}>
-            
-           
             {/* start banner section */}
             <View style={styles.bannerBox}>
                 <Image style={styles.bannerImageStyle} source={{uri:bannerImage}}/>
@@ -21,7 +21,10 @@ const Home = () => {
                 <TouchableOpacity style={styles.button}>
                 <Text style={{color:"#3EB489",fontSize:18}}>Create Account</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity onPress={()=>{
+                    console.log('hello! click')
+                    props.navigation.navigate('Login')
+                }} style={styles.button}>
                 <Text style={{color:"#3EB489",fontSize:18}}>Login As Guest</Text>
                 </TouchableOpacity>
             </View>
