@@ -6,22 +6,8 @@ import bannerImage from './assets/bro.png'
 const Home = () => {
     return (
         <View style={styles.homeContainer}>
-            <View style={styles.flexBox}>
-            <View>
-              <Text style={styles.textStyle}>9:41</Text>
-            </View>
-            <View style={styles.iconFlex}>
-                <Text>
-                    <Icon style={styles.iconStyle} name="signal"   />;
-                </Text>
-                <Text>
-                    <Icon style={styles.iconStyle} name="battery-full"   />;
-                </Text>
-                <Text>
-                    <Icon style={styles.iconStyle} name="wifi"   />;
-                </Text>
-            </View>
-            </View>
+            
+           
             {/* start banner section */}
             <View style={styles.bannerBox}>
                 <Image style={styles.bannerImageStyle} source={{uri:bannerImage}}/>
@@ -40,14 +26,17 @@ const Home = () => {
                 </TouchableOpacity>
             </View>
             {/* end login and register sectio */}
+            {/* route */}
         </View>
+
+        
     );
 };
 const styles = StyleSheet.create({
     homeContainer:{
         backgroundColor:"#3EB489",
-        height:'110vh',
-        padding:10
+        padding:10,
+        paddingBottom:40
     },
     flexBox:{
         flexDirection: "row",
