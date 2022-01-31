@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Home from './Home';
 
 
 
@@ -10,25 +11,9 @@ const friends=[
   {name:"Md Junaid", Occupation:"Backend Developer ", Address:"Chittagong"},
 ]
 export default function App() {
- const list=()=>{
-   
-  return   friends.map((friend,index)=>{
-    return (
-      <View key={index}>
-      <Text style={{color:"white",marginBottom:10}}>{friend.name}</Text>
-    </View>
-     )
-    })
-  }
+ 
   return (
-    <View style={styles.container}>
-      <Text style={styles.textStyle}>hello! first native app</Text>
-      
-  <View style={styles.list}>{list()}</View>
-   
-
-      <StatusBar style="auto" />
-    </View>
+   <Home/>
   );
 }
 
